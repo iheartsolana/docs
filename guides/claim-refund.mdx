@@ -1,0 +1,185 @@
+---
+title: "💸 How to Claim Your Refund"
+description: "Get your money back when games don't complete normally"
+---
+
+Sometimes games don't resolve with a clear winner. In these cases, Dubs automatically refunds all players. Here's everything you need to know about refunds.
+
+## When Do Refunds Happen?
+
+<CardGroup cols={2}>
+  <Card title="One-Sided Game" icon="user">
+    Only one team has players (e.g., everyone bet on Home, no one on Away)
+  </Card>
+  <Card title="Tie Game" icon="equals">
+    The game ends in a draw with no winner
+  </Card>
+  <Card title="Cancelled Event" icon="ban">
+    The real-world sports event is cancelled or postponed
+  </Card>
+  <Card title="Emergency Refund" icon="triangle-exclamation">
+    Technical issues prevent normal resolution
+  </Card>
+</CardGroup>
+
+## How Refunds Work
+
+When a refund is triggered, the prize pool is split proportionally among ALL players based on their original bet amounts.
+
+```
+Your Refund = (Your Bet / Total Pot) × Net Pool
+```
+
+### Refund Types
+
+| Type | Fees | When It Happens |
+|------|------|-----------------|
+| **Normal Refund** | 6% fee applies | Tie game, one-sided pool |
+| **Emergency Refund** | No fees | Technical issues, oracle failure |
+
+<Info>
+**Normal refunds** still have the 6% fee because the game infrastructure was used. **Emergency refunds** return 100% of funds because no game was properly played.
+</Info>
+
+## Claiming Your Refund
+
+<Steps>
+  <Step title="Get Notified">
+    When a game results in a refund, you'll receive a notification. The claim screen will show "Refund" instead of "Prize."
+  </Step>
+
+  <Step title="Review the Details">
+    The refund screen shows:
+    - Why the refund was triggered
+    - Your refund amount
+    - Original bet amount
+    - Fee breakdown (if applicable)
+  </Step>
+
+  <Step title="Tap Claim Refund">
+    Just like claiming a prize, tap the **Claim Refund** button to initiate the return.
+  </Step>
+
+  <Step title="Sign the Transaction">
+    Approve the transaction in your wallet. Your SOL will be transferred back to you.
+  </Step>
+</Steps>
+
+## Refund Scenarios Explained
+
+### One-Sided Pool
+
+<Accordion title="What happens when only one team has bets?">
+If all players bet on the same team (e.g., everyone picked Home), there's no one to pay the winners.
+
+**Example:**
+- 5 players bet 1 SOL each on Home
+- 0 players bet on Away
+- Total pot: 5 SOL
+
+Since there's no "loser" pot to pay the "winners," everyone gets a proportional refund:
+- Each player receives: (1/5) × 4.7 SOL = 0.94 SOL (after 6% fee)
+
+This ensures the game is fair and prevents exploitation.
+</Accordion>
+
+### Tie Game
+
+<Accordion title="What happens when the score is tied?">
+Some sports can end in ties (like soccer). When this happens:
+
+**Example:**
+- Home team bets: 3 SOL
+- Away team bets: 2 SOL
+- Final score: 2-2 (Tie)
+
+Since neither team "won," both pools are combined and refunded:
+- Net pool after fees: 5 × 0.94 = 4.7 SOL
+- Home players share: (3/5) × 4.7 = 2.82 SOL
+- Away players share: (2/5) × 4.7 = 1.88 SOL
+
+Each player gets their proportional share.
+</Accordion>
+
+### Emergency Refund
+
+<Accordion title="When does an emergency refund happen?">
+Emergency refunds are triggered when:
+
+1. **Oracle Failure** - If the game isn't resolved within 24 hours of the lock time, anyone can trigger an emergency refund
+2. **Technical Issues** - Platform administrators can trigger emergency refunds if something goes wrong
+3. **Event Cancellation** - If a sports event is cancelled entirely
+
+**Key difference:** Emergency refunds return 100% of funds with no fees, since the game couldn't be played fairly.
+</Accordion>
+
+## Finding Refunds
+
+Check for pending refunds the same way you check for prizes:
+
+1. Go to your **Profile** tab
+2. Look in the **Claimable** section
+3. Refundable games will show "Refund Available"
+
+## Important Notes
+
+<Warning>
+**Refunds are not automatic transfers!**
+
+Just like prizes, you must actively claim your refund. The SOL remains in the game's escrow account until you claim it.
+</Warning>
+
+<Info>
+**Sponsored bets:** If someone else paid for your bet (sponsored entry), the refund goes back to the sponsor, not to you.
+</Info>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Why is my refund less than my bet?">
+    Normal refunds have a 6% fee. This covers:
+    - Platform operating costs
+    - Oracle service fees
+    - Blockchain transaction costs
+
+    Only emergency refunds are fee-free.
+  </Accordion>
+
+  <Accordion title="Game seems stuck - no resolution or refund?">
+    If a game hasn't been resolved 24 hours after its lock time, an emergency refund becomes available. You can trigger it yourself:
+
+    1. Open the game details
+    2. Look for "Emergency Refund" option
+    3. Trigger the refund (anyone can do this)
+
+    This ensures funds are never permanently locked.
+  </Accordion>
+
+  <Accordion title="Refund claim failing?">
+    - Ensure you have ~0.001 SOL for the transaction fee
+    - Check your wallet connection
+    - Try again after a few minutes
+  </Accordion>
+</AccordionGroup>
+
+## Platform Protections
+
+Dubs has multiple safeguards to ensure you never lose access to your funds:
+
+| Protection | How It Works |
+|------------|--------------|
+| **On-chain escrow** | Funds are held by the smart contract, not Dubs |
+| **24-hour emergency** | Permissionless refund after 24 hours |
+| **Authority override** | Dubs can trigger emergency refunds for urgent issues |
+| **Transparent rules** | All refund logic is in the public smart contract |
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Create a Game" icon="plus" href="/guides/create-game">
+    Start fresh with a new game
+  </Card>
+  <Card title="Join a Game" icon="right-to-bracket" href="/guides/join-game">
+    Find active games to join
+  </Card>
+</CardGroup>

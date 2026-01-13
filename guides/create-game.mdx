@@ -1,0 +1,140 @@
+---
+title: "🎮 How to Create a Game"
+description: "Start a betting game and invite your friends"
+---
+
+<video
+  autoPlay
+  muted
+  loop
+  playsInline
+  controls
+  style={{ borderRadius: '0.5rem', width: '100%', marginBottom: '1.5rem' }}
+>
+  <source src="/images/dubs-create-game.mp4" type="video/mp4" />
+</video>
+
+Creating a game on Dubs lets you set up a bet on any upcoming sports event and invite friends to join.
+
+## Create a Sports Bet
+
+<Steps>
+  <Step title="Browse Sports Events">
+    From the main screen, tap on the **Sports** tab to see upcoming games across NBA, NFL, NHL, and MLB.
+
+    <Tip>
+      Games are organized by league and sorted by start time. Look for the matchup you want to bet on.
+    </Tip>
+  </Step>
+
+  <Step title="Select a Game">
+    Tap on any upcoming matchup to open the bet creation screen. You'll see:
+    - Team names and logos
+    - Game start time
+    - Any existing bets from friends on this game
+  </Step>
+
+  <Step title="Choose Your Team">
+    Select which outcome you're betting on:
+
+    | Selection | When You Win |
+    |-----------|--------------|
+    | **Home** | Home team wins |
+    | **Away** | Away team wins |
+    | **Draw** | Game ends in a tie (if applicable) |
+  </Step>
+
+  <Step title="Set Your Wager">
+    Enter the amount of SOL you want to bet.
+
+    - **Minimum bet**: 0.01 SOL
+    - **No maximum**: Bet as much as you're comfortable with
+
+    <Warning>
+      Only bet what you can afford to lose. Once placed, bets cannot be cancelled.
+    </Warning>
+  </Step>
+
+  <Step title="Invite Friends (Optional)">
+    Scroll through your friends list and tap to select who you want to invite. Selected friends will receive a notification to join your game.
+  </Step>
+
+  <Step title="Sign the Transaction">
+    Tap **Create Game** and approve the transaction in your wallet. This will:
+    - Create the game on the Solana blockchain
+    - Transfer your wager to the game's escrow account
+    - Send invites to selected friends
+  </Step>
+
+  <Step title="Share Your Game">
+    After creation, you'll see a success screen with options to:
+    - Copy the invite link
+    - Share directly in chat
+    - Send via Telegram
+  </Step>
+</Steps>
+
+## What Happens Next?
+
+<CardGroup cols={2}>
+  <Card title="Friends Join" icon="users">
+    Friends who receive your invite can join and pick their team
+  </Card>
+  <Card title="Betting Locks" icon="lock">
+    Betting closes 1 minute before the game starts
+  </Card>
+  <Card title="Game Plays" icon="play">
+    Watch the real game - Dubs tracks scores automatically
+  </Card>
+  <Card title="Winners Paid" icon="trophy">
+    When the game ends, winners can claim their prizes
+  </Card>
+</CardGroup>
+
+## Understanding the Pot
+
+Dubs uses **pool-based betting** (also called pari-mutuel):
+
+```
+Total Pot = All bets from all players
+
+Your Payout = (Your Bet / Winning Team's Total Bets) × Prize Pool
+
+Your Profit = Your Payout - Your Bet
+```
+
+<Info>
+*Payouts change as more players join the pool before the game starts.*
+</Info>
+
+<Info>
+**Example**:
+- Total pot: 10 SOL
+- Home team bets: 4 SOL (your 1 SOL + 3 SOL from others)
+- Away team bets: 6 SOL
+- If Home wins, prize pool = 10 SOL - 6% fees = 9.4 SOL
+- Your payout: (1 / 4) × 9.4 = **2.35 SOL**
+- Your profit: 2.35 - 1 = **1.35 SOL**
+</Info>
+
+## Tips for Game Creators
+
+<AccordionGroup>
+  <Accordion title="Best time to create a game">
+    Create games 1-24 hours before they start. This gives friends enough time to join while keeping the action fresh.
+  </Accordion>
+
+  <Accordion title="Growing the pot">
+    The more players, the bigger the pot. Share your invite link widely and invite players who might pick the opposite team.
+  </Accordion>
+
+  <Accordion title="Using referral codes">
+    If you have friends new to Dubs, share your referral code. You'll earn 1% of any pots they play in.
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<Card title="Claim Your Prize" icon="gift" href="/guides/claim-prize">
+  Learn how to collect your payout after a game ends
+</Card>

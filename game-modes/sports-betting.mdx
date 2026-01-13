@@ -1,0 +1,199 @@
+---
+title: "🏀 Sports Betting"
+description: "Bet on your favorite sports with friends"
+---
+
+Sports betting is the core experience on Dubs. Pick your team, invite friends, and compete for the pot on real-world sports events.
+
+## Supported Leagues
+
+<CardGroup cols={4}>
+  <Card title="NBA" icon="basketball">
+    Basketball
+  </Card>
+  <Card title="NFL" icon="football">
+    Football
+  </Card>
+  <Card title="NHL" icon="hockey-puck">
+    Hockey
+  </Card>
+  <Card title="MLB" icon="baseball">
+    Baseball
+  </Card>
+</CardGroup>
+
+## How Sports Betting Works
+
+### Pool-Based Betting (Pari-Mutuel)
+
+Unlike traditional sportsbooks with fixed odds, Dubs uses **pool-based betting**:
+
+- All bets go into a shared prize pool
+- Winners split the pool proportionally based on their bet size
+- Odds are determined by how players bet, not set by the house
+
+<Info>
+**Why pool-based?** This model is provably fair, fully transparent, and works perfectly on the blockchain. There's no "house edge" - just players competing against each other.
+</Info>
+
+### The Betting Process
+
+<Steps>
+  <Step title="Find a Game">
+    Browse the Sports tab for upcoming matchups across all supported leagues.
+  </Step>
+  <Step title="Create or Join">
+    Start a new game or join an existing one created by friends.
+  </Step>
+  <Step title="Pick Your Side">
+    Choose **Home**, **Away**, or **Draw** (where applicable).
+  </Step>
+  <Step title="Set Your Stake">
+    Enter your wager amount in SOL.
+  </Step>
+  <Step title="Wait for Resolution">
+    Betting locks 1 minute before game time. Watch the action!
+  </Step>
+  <Step title="Claim Your Payout">
+    When the game ends, winners claim their share of the pot.
+  </Step>
+</Steps>
+
+## Understanding Payouts
+
+### How Pari-Mutuel Betting Works
+
+With pari-mutuel betting:
+- You are **not betting against odds** set by a house
+- You are **splitting the prize pool** with other winners
+- Your return depends on **how many others picked the same outcome**
+
+### Payout Formula
+
+```
+Prize Pool = Total Pot × 0.94 (after 6% fee)
+
+Your Payout = (Your Bet / Winning Team's Total Bets) × Prize Pool
+```
+
+<Info>
+*Payouts change as more players join the pool before the game starts.*
+</Info>
+
+<Warning>
+**Payout ≠ Profit**
+
+The formula above returns your **total payout**, not your net profit. To calculate profit:
+
+```
+Net Profit = Your Payout - Your Stake
+```
+</Warning>
+
+### Payout Examples
+
+<Tabs>
+  <Tab title="Balanced Game">
+    **Scenario:** Even split between teams
+
+    | Pool | Amount |
+    |------|--------|
+    | Home Team Bets | 5 SOL |
+    | Away Team Bets | 5 SOL |
+    | Total Pot | 10 SOL |
+    | Prize Pool (after fees) | 9.4 SOL |
+
+    **If Home wins (you bet 1 SOL on Home):**
+    - Your Payout: (1/5) × 9.4 = **1.88 SOL**
+    - Your Profit: 1.88 - 1 = **0.88 SOL (88% return)**
+  </Tab>
+  <Tab title="Underdog Wins">
+    **Scenario:** Heavy favorite loses
+
+    | Pool | Amount |
+    |------|--------|
+    | Home Team Bets | 8 SOL |
+    | Away Team Bets | 2 SOL |
+    | Total Pot | 10 SOL |
+    | Prize Pool (after fees) | 9.4 SOL |
+
+    **If Away wins (you bet 1 SOL on Away):**
+    - Your Payout: (1/2) × 9.4 = **4.7 SOL**
+    - Your Profit: 4.7 - 1 = **3.7 SOL (370% return)**
+  </Tab>
+  <Tab title="Favorite Wins">
+    **Scenario:** Heavy favorite wins
+
+    | Pool | Amount |
+    |------|--------|
+    | Home Team Bets | 8 SOL |
+    | Away Team Bets | 2 SOL |
+    | Total Pot | 10 SOL |
+    | Prize Pool (after fees) | 9.4 SOL |
+
+    **If Home wins (you bet 1 SOL on Home):**
+    - Your Payout: (1/8) × 9.4 = **1.175 SOL**
+    - Your Profit: 1.175 - 1 = **0.175 SOL (17.5% return)**
+  </Tab>
+</Tabs>
+
+## Game Outcomes
+
+| Outcome | What Happens |
+|---------|--------------|
+| **Home Wins** | Home team bettors split the prize pool |
+| **Away Wins** | Away team bettors split the prize pool |
+| **Draw/Tie** | All players receive proportional refunds |
+| **One-Sided Pool** | Everyone refunded (no opposing bets) |
+
+## Live Score Tracking
+
+Dubs automatically tracks live scores for all games:
+
+- Real-time score updates during games
+- Automatic game resolution when final
+- Oracle verification ensures accuracy
+- Results typically posted within minutes of game end
+
+## Social Features
+
+<CardGroup cols={2}>
+  <Card title="Friend Invites" icon="envelope">
+    Invite friends directly when creating a game
+  </Card>
+  <Card title="In-Game Chat" icon="comments">
+    Talk trash and celebrate with other players
+  </Card>
+  <Card title="Share Links" icon="share">
+    Copy invite links to share anywhere
+  </Card>
+  <Card title="Telegram Alerts" icon="bell">
+    Get notified about game results
+  </Card>
+</CardGroup>
+
+## Tips for Sports Betting
+
+<AccordionGroup>
+  <Accordion title="Look for value in underdogs">
+    When everyone bets on the favorite, underdog payouts can be massive. A small bet on a plausible upset can yield huge returns.
+  </Accordion>
+
+  <Accordion title="Check the pool balance">
+    Before betting, see how the pot is split. This tells you your potential payout. Very one-sided pools may not be worth joining.
+  </Accordion>
+
+  <Accordion title="Invite friends on the other side">
+    More opposing bets = bigger pot. Invite friends who might pick the other team to grow your potential payout.
+  </Accordion>
+
+  <Accordion title="Set limits">
+    Only bet what you can afford to lose. Start small while you learn how the platform works.
+  </Accordion>
+</AccordionGroup>
+
+## Get Started
+
+<Card title="Create Your First Game" icon="plus" href="/guides/create-game">
+  Pick an upcoming matchup and start a game with friends
+</Card>

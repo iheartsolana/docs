@@ -1,0 +1,151 @@
+---
+title: "🏆 How to Claim Your Prize"
+description: "Collect your payout after your team wins"
+---
+
+When your team wins, it's time to collect your prize! Dubs makes claiming easy with automatic notifications and one-tap payouts.
+
+## When Can I Claim?
+
+You can claim your prize when:
+
+1. The sports game has ended
+2. The final score has been recorded
+3. Your team has won
+
+<Info>
+Games are typically resolved within minutes of the final whistle. Dubs automatically fetches scores from official sports data providers.
+</Info>
+
+## Claiming Your Prize
+
+<Steps>
+  <Step title="Get Notified">
+    When a game you're in ends, you'll receive a notification. Winners see a celebration screen with their prize amount!
+  </Step>
+
+  <Step title="Review Your Payout">
+    The claim screen shows:
+
+    | Info | Description |
+    |------|-------------|
+    | **Final Score** | The official game result |
+    | **Your Prize** | Amount you'll receive in SOL |
+    | **Prize Pool** | Total pot after fees |
+    | **Fee Breakdown** | Platform and oracle fees |
+  </Step>
+
+  <Step title="Tap Claim Prize">
+    Hit the **Claim Prize** button to initiate the payout. This creates a transaction to transfer your SOL.
+  </Step>
+
+  <Step title="Sign the Transaction">
+    Approve the claim transaction in your wallet. The SOL will be transferred directly to your wallet.
+
+    <Tip>
+      Claiming costs a tiny transaction fee (~0.001 SOL), but your payout far exceeds this!
+    </Tip>
+  </Step>
+
+  <Step title="Celebrate!">
+    Your SOL arrives instantly. You'll see a celebration animation with falling coins to mark your victory!
+  </Step>
+</Steps>
+
+## How Payouts Are Calculated
+
+Dubs uses **pari-mutuel betting** where the prize pool is split among winners proportionally:
+
+```
+Prize Pool = Total Pot - 6% Fees
+
+Your Payout = (Your Bet / Winning Team's Total Bets) × Prize Pool
+
+Your Profit = Your Payout - Your Bet
+```
+
+<Info>
+*Payouts change as more players join the pool before the game starts.*
+</Info>
+
+### Example Calculation
+
+<Accordion title="See a worked example">
+**Game Setup:**
+- Total pot: 10 SOL
+- Home team bets: 3 SOL
+- Away team bets: 7 SOL (including your 2 SOL bet)
+
+**Away Team Wins:**
+- Prize pool after 6% fees: 10 × 0.94 = 9.4 SOL
+- Your payout: (2 / 7) × 9.4 = **2.69 SOL**
+- Your profit: 2.69 - 2 = **0.69 SOL (34.5% return)**
+
+The more lopsided the betting, the bigger the potential return for the underdog!
+</Accordion>
+
+## Fee Breakdown
+
+A 6% fee is taken from the prize pool:
+
+| Recipient | Percentage | Purpose |
+|-----------|------------|---------|
+| Platform | 4-5% | Operating costs |
+| Oracle | 1% | Score verification |
+| Referrer | 0-1% | If you used a referral code |
+
+<Info>
+Fees are only taken from the winning pool. If you lose, you don't pay any additional fees beyond your original bet.
+</Info>
+
+## Finding Claimable Games
+
+Not sure if you have prizes to claim? Check your profile:
+
+1. Go to your **Profile** tab
+2. Look for the **Claimable** section
+3. Any games with unclaimed prizes will appear here
+
+You can also check **Transaction History** to see past claims and active games.
+
+## What If I Don't Claim?
+
+<Warning>
+Your prize doesn't expire, but it's best to claim promptly:
+- Your SOL remains in the game's escrow until claimed
+- There's no penalty for delayed claims
+- However, claiming quickly lets you use your SOL in new games!
+</Warning>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Game ended but can't claim yet?">
+    - Final scores take a few minutes to sync after a game ends
+    - Overtime games take longer to resolve
+    - Delayed games may be marked for manual resolution
+  </Accordion>
+
+  <Accordion title="Claim transaction failed?">
+    - Make sure you have ~0.001 SOL for the transaction fee
+    - Try again - network congestion can cause temporary failures
+    - Check your wallet is still connected
+  </Accordion>
+
+  <Accordion title="Prize amount seems wrong?">
+    - Review the fee breakdown on the claim screen
+    - Remember the 6% platform fee is deducted
+    - Your share depends on how much the winning team bet
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Create Another Game" icon="plus" href="/guides/create-game">
+    Roll your payout into a new bet
+  </Card>
+  <Card title="Understand Refunds" icon="rotate-left" href="/guides/claim-refund">
+    Learn when and how refunds happen
+  </Card>
+</CardGroup>
