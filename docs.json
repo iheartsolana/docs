@@ -51,6 +51,7 @@
           {
             "group": "Legal",
             "pages": [
+              "legal/gambling-license",
               "legal/privacy-policy",
               "legal/terms-of-service"
             ]
