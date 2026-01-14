@@ -17,6 +17,7 @@
             "group": "Getting Started",
             "pages": [
               "index",
+              "contract",
               "getting-started/connect-wallet"
             ]
           },

@@ -1,0 +1,59 @@
+---
+title: "📜 Smart Contract"
+description: "Verified Dubs program address on Solana"
+---
+
+<Info>
+**Always verify you're interacting with the official Dubs contract.**
+</Info>
+
+## Program ID
+
+<Card>
+  <div style={{ textAlign: 'center', padding: '2rem 0' }}>
+    <p style={{ fontSize: '0.875rem', color: '#888', marginBottom: '0.5rem' }}>DUBS V2 PROGRAM ADDRESS</p>
+    <code style={{ fontSize: '1.125rem', fontWeight: 'bold', wordBreak: 'break-all' }}>
+      85wJGp9uc8w2FeKX9CEHsudTo1UVCrmuRFy37oCcaoG1
+    </code>
+  </div>
+</Card>
+
+<CardGroup cols={2}>
+  <Card title="View on Solscan" icon="magnifying-glass" href="https://solscan.io/account/85wJGp9uc8w2FeKX9CEHsudTo1UVCrmuRFy37oCcaoG1">
+    Explore transactions and program data
+  </Card>
+  <Card title="View on Solana FM" icon="cube" href="https://solana.fm/address/85wJGp9uc8w2FeKX9CEHsudTo1UVCrmuRFy37oCcaoG1">
+    Alternative explorer
+  </Card>
+</CardGroup>
+
+## Key Addresses
+
+| Role | Address | Purpose |
+|------|---------|---------|
+| **Program** | `85wJGp9uc8w2FeKX9CEHsudTo1UVCrmuRFy37oCcaoG1` | Main Dubs V2 smart contract |
+| **Operator** | `BVZXwZpfgyzTBdRFHohkHZppPHnAyqyctRsKy3vWfQib` | Receives 4-5% platform fee |
+| **Oracle** | `FWUJCthDfPcgmTvdQWM5uofxxiYjqJFMMwiLYvS7LBFa` | Resolves game outcomes |
+
+<Warning>
+All addresses above are **hardcoded** in the smart contract and cannot be changed. If you see different addresses, you may be interacting with a fake contract.
+</Warning>
+
+## Network
+
+<Card title="Solana Mainnet" icon="globe">
+  Dubs operates exclusively on **Solana Mainnet**. Make sure your wallet is connected to Mainnet, not Devnet or Testnet.
+</Card>
+
+## Verifying Transactions
+
+Every Dubs transaction is publicly verifiable on-chain:
+
+- **Game creation** - Creates a GameV2 PDA account
+- **Staking** - Creates a Position PDA and transfers SOL to game escrow
+- **Resolution** - Oracle records the winning outcome
+- **Claims** - Transfers SOL from game escrow to winner
+
+<Tip>
+You can verify any game by checking its PDA on Solscan. The seeds are `["game_v2", game_id]`.
+</Tip>
